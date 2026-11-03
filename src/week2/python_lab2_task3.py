@@ -34,9 +34,7 @@ OPERATORS = ['+', '-', '*', '/', '(', ')']
 
 def count_operators(expression: str) -> dict[str, int]:
     """Return a dict with the count of each operator in expression."""
-    # Start with every operator at 0 so all six keys are always present
     counts = {op: 0 for op in OPERATORS}
-    # Go through the expression one character at a time
     for char in expression:
         if char in counts:
             counts[char] += 1

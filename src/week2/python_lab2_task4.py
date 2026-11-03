@@ -95,7 +95,3 @@ if __name__ == "__main__":
     totals_comp = item_totals_comp(PRICES, QUANTITIES)
     print(f"Totals (comprehension): {totals_comp}")
     print(f"Totals > 30 (comprehension): {filter_above_comp(totals_comp)}")
-
-    # Which style is easier to read? For these small transformations the
-    # list comprehensions read more naturally ("p * q for each pair"), while
-    # map()/filter() need a lambda and an extra list(...) around the result.

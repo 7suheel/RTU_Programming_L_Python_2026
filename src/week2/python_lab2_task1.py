@@ -62,7 +62,6 @@ def largest_city(populations: dict[str, int]) -> tuple[str, int]:
     """Return (city, population) for the city with the largest population."""
     if not populations:
         return ("", 0)
-    # max() returns the first key it meets on a tie, i.e. the first in the dict
     city = max(populations, key=populations.get)
     return (city, populations[city])
 
@@ -71,7 +70,6 @@ def smallest_city(populations: dict[str, int]) -> tuple[str, int]:
     """Return (city, population) for the city with the smallest population."""
     if not populations:
         return ("", 0)
-    # min() also keeps the first key on a tie
     city = min(populations, key=populations.get)
     return (city, populations[city])
 
@@ -85,7 +83,6 @@ if __name__ == "__main__":
     # Keep all input() and print() calls inside this block, otherwise the
     # autograder cannot import your file.
 
-    # Own datasets: one week of daily temperatures (°C) and some Latvian cities
     temperatures = [3.5, 5.0, 2.1, -1.4, 0.8, 4.2, 6.7]
     city_population = {
         "Riga": 605000,
